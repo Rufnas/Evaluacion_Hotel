@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+.cuadricula {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	gap: 10px 10px;
+	grid-auto-flow: row;
+	grid-template-areas: ". . . .";
+}
+
+.producto {  
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 0.4fr 1.6fr 0.4fr;
+	gap: 0px 0px;
+	grid-auto-flow: row;
+	grid-template-areas:
+    "Metros Metros Precio Precio"
+    "Imagen Imagen Imagen Imagen"
+    "NumCamas NumCamas EsExterior EsExterior";
+    
+    padding:5px;
+	border-radius:3px;
+	
+	background-color:var(--colorPrincipalClaro);
+	
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.48);
+}
+
+.Imagen {
+	grid-area: Imagen;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.Imagen img {
+	width: 100%;
+}
+
+.Metros {
+	grid-area: Metros;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+	text-align: center;
+	
+	font-weight: bold;
+	border-right: 1px solid black;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.Precio {
+	grid-area: Precio;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+	font-weight: bold;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.NumCamas {
+	grid-area: NumCamas;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+	font-weight: bold;
+	border-right: 1px solid black;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.EsExterior {
+	grid-area: EsExterior;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	
+	font-weight: bold;
+	
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+
+.productoViejo {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto auto auto;
+	gap: 10px 0px;
+	grid-auto-flow: row;
+	grid-template-areas: 
+		"prod_cabecera" 
+		"prod_cuerpo" 
+		"prod_pie";
+
+	padding:5px;
+	border-radius:3px;
+	
+	background-color:var(--colorPrincipalClaro);
+	
+	box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.48);
+}
+
+.prod_cabecera {
+	grid-area: prod_cabecera;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.prod_cabecera h2:first-child{
+	width:100%
+} 
+
+.prod_cuerpo {
+	grid-area: prod_cuerpo;
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.prod_cuerpo p{
+	padding-left:10px;
+}
+
+
+.prod_pie {
+	grid-area: prod_pie;
+}
+
+.cuadriculaPrincipal article {
+	height: 150px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	
+	padding: 50px;
+}
+
+.cuadriculaPrincipal h3 {
+	text-align: center;
+	font-size: 24px;
+}
+
+.cuadriculaPrincipal p {
+	margin-top: 20px;
+	text-align: justify;
+	font-size: 18px;
+}
